@@ -1,0 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using Store.Infrastructure;
+var builder = WebApplication.CreateBuilder(args);
+var dbPath = Path.GetFullPath(Path.Combine(builder.Environment.ContentRootPath, "..", "store_lab3.db"));
+builder.Services.AddDbContext<StoreContext>(o => o.UseSqlite($"Data Source={dbPath}"));
+builder.Services.AddControllersWithViews();
+var app = builder.Build();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllerRoute(name: "default", pattern: "{controller=Products}/{action=Index}/{id?}");
+app.Run();

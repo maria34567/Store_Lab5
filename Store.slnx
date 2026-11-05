@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Store.Common/Store.Common.csproj" />
+  <Project Path="Store.Console/Store.Console.csproj" />
+  <Project Path="Store.Infrastructure/Store.Infrastructure.csproj" />
+  <Project Path="Store.REST/Store.REST.csproj" />
+  <Project Path="Store.MVC/Store.MVC.csproj" />
+</Solution>

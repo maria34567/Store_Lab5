@@ -1,0 +1,2 @@
+@model Store.Infrastructure.Models.ElectronicsModel
+<!doctype html><html lang="uk"><head><meta charset="utf-8"/><title>@Model.Name — Store</title></head><body style="font:18px Arial;margin:3rem"><a asp-action="Index">← До каталогу</a><h1>@Model.Name</h1><p>Бренд: @Model.Brand</p><p>Ціна: @Model.Price.ToString("N2") ₴</p><p>Гарантія: @Model.WarrantyMonths міс.</p><p>ID: @Model.Id</p></body></html>
